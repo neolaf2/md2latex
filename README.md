@@ -1,71 +1,65 @@
-# md2latex README
+# md2latex VSCode Extension
 
-This is the README for your extension "md2latex". After writing up a brief description, we recommend including the following sections.
+The md2latex extension enables you to easily convert between Markdown and LaTeX documents directly within Visual Studio Code using Pandoc as the conversion engine.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Markdown to LaTeX:** Convert `.md` files to `.tex` files.
+- **LaTeX to Markdown:** Convert `.tex` files to `.md` files.
+- **Context Menu Integration:** Right-click on a file in the Explorer or editor tab to quickly trigger a conversion.
+- **Command Palette Support:** Use VS Code’s Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS) to run conversion commands.
 
-For example if there is an image subfolder under your extension project workspace:
+## Prerequisites
 
-\!\[feature X\]\(images/feature-x.png\)
+- **Pandoc:** Ensure Pandoc is installed and available in your system’s PATH. You can verify by running:
+  ```bash
+  pandoc --version
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Download Pandoc from pandoc.org.
+	•	Visual Studio Code: Make sure you have VS Code installed.
 
-## Requirements
+## Installation
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### Option 1: Install from Source
+	1.	Clone the Repository:
 
-## Extension Settings
+git clone https://github.com/neolaf2/md2latex.git
+cd md2latex
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
-For example:
+	2.	Install Dependencies:
 
-This extension contributes the following settings:
+npm install
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
 
-## Known Issues
+	3.	Build the Extension (if applicable):
+If using TypeScript, compile the project:
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+npm run compile
 
-## Release Notes
 
-Users appreciate release notes as you update your extension.
+	4.	Launch the Extension:
+Open the project in VS Code and press F5 to open a new Extension Development Host window with the extension loaded.
 
-### 1.0.0
+### Option 2: Install from the VS Code Marketplace
 
-Initial release of ...
+If the extension is published, search for “md2latex” in the Extensions view (Ctrl+Shift+X or Cmd+Shift+X on macOS) and click Install.
 
-### 1.0.1
+Usage
+	1.	Open a Document:
+Open a Markdown (.md) or LaTeX (.tex) file in VS Code.
+	2.	Trigger Conversion:
+	•	Context Menu: Right-click the file in the Explorer or editor title area.
+	•	For a Markdown file, select “Convert Markdown to LaTeX”.
+	•	For a LaTeX file, select “Convert LaTeX to Markdown”.
+	•	Command Palette: Press Ctrl+Shift+P (or Cmd+Shift+P on macOS) and search for the conversion command.
+	3.	View Output:
+The extension will use Pandoc to perform the conversion, create the new file in the same directory (with the appropriate file extension), and automatically open the converted document in a new editor tab.
 
-Fixed issue #.
+## Contributing
 
-### 1.1.0
+Contributions are welcome! Feel free to fork the repository, submit issues, or create pull requests. For any questions or suggestions, please open an issue on the GitHub repository.
 
-Added features X, Y, and Z.
+## License
 
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This project is licensed under the MIT License.
