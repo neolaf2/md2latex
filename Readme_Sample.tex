@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\title{md2latex VSCode Extension}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Overview}
+The \texttt{md2latex} extension enables you to easily convert between Markdown and LaTeX documents directly within Visual Studio Code using Pandoc as the conversion engine.
+
+\section{Features}
+\begin{itemize}
+  \item \textbf{Markdown to LaTeX:} Convert \texttt{.md} files to \texttt{.tex} files.
+  \item \textbf{LaTeX to Markdown:} Convert \texttt{.tex} files to \texttt{.md} files.
+  \item \textbf{Context Menu Integration:} Right-click on a file in the Explorer or editor tab to quickly trigger a conversion.
+  \item \textbf{Command Palette Support:} Use VS Code's Command Palette (\texttt{Ctrl+Shift+P} on Windows/Linux or \texttt{Cmd+Shift+P} on macOS) to run conversion commands.
+\end{itemize}
+
+\section{Prerequisites}
+\begin{itemize}
+  \item \textbf{Pandoc:} Ensure Pandoc is installed and available in your system's PATH. You can verify the installation by running:
+  \begin{lstlisting}[basicstyle=\ttfamily,breaklines=true]
+pandoc --version
+  \end{lstlisting}
+  Download Pandoc from \href{https://pandoc.org/installing.html}{pandoc.org}.
+  
+  \item \textbf{Visual Studio Code:} Make sure you have VS Code installed.
+\end{itemize}
+
+\section{Installation}
+\subsection*{Option 1: Install from Source}
+\begin{enumerate}
+  \item \textbf{Clone the Repository:}
+  \begin{lstlisting}[basicstyle=\ttfamily,breaklines=true]
+git clone https://github.com/neolaf2/md2latex.git
+cd md2latex
+  \end{lstlisting}
+  
+  \item \textbf{Install Dependencies:}
+  \begin{lstlisting}[basicstyle=\ttfamily,breaklines=true]
+npm install
+  \end{lstlisting}
+  
+  \item \textbf{Build the Extension (if applicable):}\\
+  If using TypeScript, compile the project:
+  \begin{lstlisting}[basicstyle=\ttfamily,breaklines=true]
+npm run compile
+  \end{lstlisting}
+  
+  \item \textbf{Launch the Extension:}\\
+  Open the project in VS Code and press \texttt{F5} to open a new Extension Development Host window with the extension loaded.
+\end{enumerate}
+
+\subsection*{Option 2: Install from the VS Code Marketplace}
+If the extension is published, search for \texttt{md2latex} in the Extensions view (\texttt{Ctrl+Shift+X} on Windows/Linux or \texttt{Cmd+Shift+X} on macOS) and click \textbf{Install}.
+
+\section{Usage}
+\begin{enumerate}
+  \item \textbf{Open a Document:}\\
+  Open a Markdown (\texttt{.md}) or LaTeX (\texttt{.tex}) file in VS Code.
+  
+  \item \textbf{Trigger Conversion:}
+  \begin{itemize}
+    \item \textbf{Context Menu:} Right-click the file in the Explorer or editor title area.
+      \begin{itemize}
+        \item For a Markdown file, select \texttt{Convert Markdown to LaTeX}.
+        \item For a LaTeX file, select \texttt{Convert LaTeX to Markdown}.
+      \end{itemize}
+    \item \textbf{Command Palette:} Press \texttt{Ctrl+Shift+P} (or \texttt{Cmd+Shift+P} on macOS) and search for the conversion command.
+  \end{itemize}
+  
+  \item \textbf{View Output:}\\
+  The extension uses Pandoc to perform the conversion, creates the new file in the same directory (with the appropriate file extension), and automatically opens the converted document in a new editor tab.
+\end{enumerate}
+
+\section{Contributing}
+Contributions are welcome! Feel free to fork the repository, submit issues, or create pull requests. For any questions or suggestions, please open an issue on the GitHub repository:
+\begin{center}
+\url{https://github.com/neolaf2/md2latex}
+\end{center}
+
+\section{License}
+This project is licensed under the MIT License.
+
+\end{document}

@@ -3,6 +3,14 @@
   "displayName": "MD2Latex",
   "description": "Convert between Latex .tex files and  Markdown .md files from context menu and command pallette",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neolaf2/md2latex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neolaf2/md2latex/issues"
+  },
+  "homepage": "https://github.com/neolaf2/md2latex#readme",
   "engines": {
     "vscode": "^1.96.0"
   },
